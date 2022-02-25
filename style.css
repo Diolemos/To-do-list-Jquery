@@ -1,0 +1,123 @@
+body{
+    background-color: #ffffff;
+}
+/* *{
+    box-sizing: border-box;
+} */
+
+.main-container{
+    max-width: 500px;
+    box-sizing: border-box;
+   
+    border: 1px solid #999;
+    margin: 50px auto;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.header{
+    background-color: rgb(10, 5, 15);
+    color: rgb(248, 248, 248);
+    height:100% ;
+    border-radius: 19px 19px 0 0;
+}
+
+.header h1{
+    margin: 0;
+    text-align:  center;
+    line-height: 80px;
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.task-list{
+    margin: 0;
+    padding: 0;
+}
+
+.task-list li{
+    height: 50px;
+    list-style: none;
+    border: 1px solid #cfd8dc;
+}
+
+
+.col1{
+    width: 10%;
+    float: left;
+    background-color:rgb(90, 89, 92) ;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col2{
+    width: 70%;
+    float: left;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    height: 100%;
+    font-family: arial;
+    box-sizing: border-box;
+
+}
+
+.col3{
+    width: 20%;
+    box-sizing: border-box;
+    height: 100%;
+    float: left;
+    background-color:rgb(128, 126, 131) ;
+    
+    
+}
+.col3:hover{
+    background-color:rgb(246, 247, 248) ;
+    cursor: pointer;
+    color: black;
+}
+
+.remove-task{
+    
+    background-image: url(images/red-cross.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.input-field{
+    height: 50px;
+    border: 1px solid #cfd8dc;
+}
+
+.add-text{
+    width: 80%;;
+    height: 50px;
+    padding: 0 15px;
+    float: left;
+    box-sizing: border-box;
+    border: 0;
+    outline: none;
+    color: rgba(0,0,0,0.4);
+    font-family:Arial, Helvetica, sans-serif ;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.add-btn{
+    border: 0;
+    padding: 0;
+    color: rgb(245, 245, 245);
+    font-size:40px ;
+    font-weight: bold;
+    outline: none;
+    border-top:1px solid  ;
+
+}
+
+
