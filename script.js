@@ -4,7 +4,8 @@ $(function () {
     let addBtn = $('.add-btn');
     let inpText = $('.add-text');
     let list = $('.task-list');
-    let removeBtn = $('.remove-task')
+    let removeBtn = $('.remove-task');
+
 
 
     //*************************************
@@ -17,7 +18,7 @@ $(function () {
 
         let item = `<li>
                     <div class="check-task col1">
-                        <input type="checkbox">
+                        <input type="checkbox" class="checkItem">
                     </div>
                     <div class="task col2 ">${inpText.val()}</div>
                     <div class="remove-task col3">
@@ -35,9 +36,9 @@ $(function () {
     //*************************************
 
     //It's necessery to use event delegation
-    //instead of removeBtn.on(click), this would asign the event listener to the buttons the already exist on the page, not working with the items the user created.
-    //So the Event listener is added to the container,
-    //and the button is added as a paremeter
+    //instead of removeBtn.on(click... , this would asign the event listener to the buttons that already exist on the page, not working with the items the user would create.
+    //So the Event listener is added to the container (in my case the variable 'list'),
+    //and the button (in my case '.remove-task') is added as a 3rd paremeter to the event listener.
 
     list.on('click', '.remove-task', function () {
         $(this).parent().remove()
@@ -52,9 +53,9 @@ $(function () {
     //This strikes the selected item
     //
     //*************************************
-    function toggleStrike() {
-
-    }
+    list.on('change', '.checkItem', function () {
+        $(this).parent().next().toggleClass('strike')
+    })
 
     //end of ready function
 })
